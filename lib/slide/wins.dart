@@ -56,18 +56,18 @@ class _WelOneState extends State<WelOne> {
                     width: 400,color: Colors.white,child: Column(
 //                    crossAxisAlignment: CrossAxisAlignment.start,
                     children: <Widget>[
-                      ExpandableText(
-                        'مرحباً بك في مصحفي تطبيق الموسوعة القرآنية التفاعلية', 25,Colors.black,
-
+                      Text(
+                        'مرحباً بك في مصحفي تطبيق الموسوعة القرآنية التفاعلية', style: TextStyle(fontSize: 25,color: Colors.black,fontFamily: 'tajawalReg',fontWeight: FontWeight.bold,),
+                          textAlign: TextAlign.center
                       ),
 //                      Text(
 //                        ' ', style: TextStyle(fontFamily: 'tajawalReg',fontSize: 30,fontWeight: FontWeight.bold),textAlign: TextAlign.center,
 //
 //                      ),
 
-                     SizedBox(height: 25,), ExpandableText(
+                     SizedBox(height: 25,), Text(
                      "رفيقك الدائم في رحلة فهم القرآن الكريم ومعرفة علومه وتدبر رسالته، ومعينك لتكون من أهل القرآن الكريم أهل الله وخاصته، وعلى صلة دائمة مع الذكر الحكيم من خلال مصحفك الخاص."
-                      ,15.0,Colors.grey,
+                      ,style: TextStyle(fontSize: 15,color: Colors.grey,fontFamily: 'tajawalReg',fontWeight: FontWeight.bold,),textAlign: TextAlign.center,
 
                       ),
 
@@ -191,8 +191,9 @@ class _WelTwoState extends State<WelTwo> {
                     width: 400,color: Colors.white,child: Column(
 //                    crossAxisAlignment: CrossAxisAlignment.start,
                       children: <Widget>[
-                        ExpandableText(
-                          'تطبيق مصحفي مصمم ليدعم تدبرك وأنت تتلو من مصحفك', 25,Colors.black,
+                        Text(
+                          'تطبيق مصحفي مصمم ليدعم تدبرك وأنت تتلو من مصحفك', style: TextStyle(fontSize: 25,color: Colors.black,fontFamily: 'tajawalReg',fontWeight: FontWeight.bold,),
+                            textAlign: TextAlign.center
 
                         ),
 //                      Text(
@@ -200,9 +201,10 @@ class _WelTwoState extends State<WelTwo> {
 //
 //                      ),
 
-                        SizedBox(height: 25,), ExpandableText(
+                        SizedBox(height: 25,), Text(
                           "يمكنك الوصول بسهولة لكل ما يتعلق بصفحات مصحفك الخاص من تلاوات وتسجيلات ومرئيات وتفاسير وشروح وترجمات للمعاني ومؤلفات بعدة لغات، لتنعم بصحبة القرآن الكريم و الاطلاع على علومه دون عناء."
-                          ,15.0,Colors.grey,
+                          ,style: TextStyle(fontSize: 15,color: Colors.grey,fontFamily: 'tajawalReg',fontWeight: FontWeight.bold,),
+                            textAlign: TextAlign.center
 
                         ),
 
@@ -322,9 +324,10 @@ class _WelThreeState extends State<WelThree> {
                     width: 400,color: Colors.white,child: Column(
 //                    crossAxisAlignment: CrossAxisAlignment.start,
                       children: <Widget>[
-                        ExpandableText(
+                        Text(
 'تطبيق مصحفي يساعدك في زيادة معلوماتك القرآنية'
-                          , 25,Colors.black,
+                          , style: TextStyle(fontSize: 25,color: Colors.black,fontFamily: 'tajawalReg',fontWeight: FontWeight.bold,),
+                            textAlign: TextAlign.center
 
                         ),
 //                      Text(
@@ -332,9 +335,10 @@ class _WelThreeState extends State<WelThree> {
 //
 //                      ),
 
-                        SizedBox(height: 25,), ExpandableText(
+                        SizedBox(height: 25,), Text(
      "خير معين لك لاستثمار أوقاتك في الاستزادة من زاد القرآن الكريم ودوام الصلة به من خلال برمجة ختماتك المتنوعة وقراءاتك مع خدمات البحث وتدوين الملاحظات والحفظ في محفظتك وغير ذلك الكثير."
-                          ,15.0,Colors.grey,
+                          ,style: TextStyle(fontSize: 15,color: Colors.grey,fontFamily: 'tajawalReg',fontWeight: FontWeight.bold,),
+                            textAlign: TextAlign.center
 
                         ),
 

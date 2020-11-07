@@ -7,6 +7,7 @@ import 'package:image_picker/image_picker.dart';
 import 'package:opedia/opedia/op_web.dart';
 import 'package:opedia/opedia/qropedia.dart';
 import 'package:opedia/slide/qrSlide.dart';
+import 'package:permission_handler/permission_handler.dart';
 
 /// 使用前需已经获取相关权限
 /// Relevant privileges must be obtained before use
@@ -44,10 +45,46 @@ class QrcodeRState extends State<QrcodeR>
   Timer _timer;
   @override
   void initState() {
+    _permission();
     super.initState();
     openFlashlight = false;
     _initAnimation();
   }
+  Future _permission()async{
+    var status = await Permission.camera.status;
+    if (status.isUndetermined) {
+      Permission.camera.request();
+
+      // We didn't ask for permission yet.
+      print(status);
+    }
+
+// You can can also directly ask the permission about its status.
+    if (await Permission.location.isRestricted) {
+      // The OS restricts access, for example because of parental controls.
+    }
+/*//    final PermissionHandler _permissionHandler = PermissionHandler();
+    //
+    Map<PermissionGroup, PermissionStatus> permissions =
+        await PermissionHandler().requestPermissions([PermissionGroup.camera]);
+    print(permissions);
+    if (permissions[PermissionGroup.camera] == PermissionStatus.granted) {
+      showDialog(
+        context: context,
+        builder: (context) {
+          return Dialog(
+            child: Text("ok"),
+          );
+        },
+      );
+      setState(() {
+        isOk = true;
+      });
+    }*/
+
+    //
+  }
+
 
   void _initAnimation() {
     setState(() {
@@ -174,8 +211,8 @@ class QrcodeRState extends State<QrcodeR>
               ),
             ),
             if (widget.headerWidget != null) widget.headerWidget,
-            Container(
-                decoration: BoxDecoration(image: DecorationImage(colorFilter: new ColorFilter.mode(Colors.black.withOpacity(0.8), BlendMode.dstATop),image: AssetImage("assets/qrbg.png"),fit: BoxFit.fill))),
+//            Container(
+//                decoration: BoxDecoration(image: DecorationImage(colorFilter: new ColorFilter.mode(Colors.black.withOpacity(0.8), BlendMode.dstATop),image: AssetImage("assets/qrbg.png"),fit: BoxFit.fill))),
 
 
             Align(alignment: Alignment.bottomCenter,

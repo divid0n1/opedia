@@ -132,16 +132,21 @@ child: Column(children: [
       ),
         height: 60,
         width: 300,
-        child: Row(mainAxisAlignment: MainAxisAlignment.end,
+        child: Stack(
           children: [
-            Text(
-              'إبدأ الأن',
-              style: TextStyle(color: Colors.white,fontFamily: 'tajawalReg',fontWeight: FontWeight.bold, fontSize: 22),
-            ),SizedBox(width: 50,),
-            FloatingActionButton(mini: true,
-              heroTag: "absscd",
-              backgroundColor: Color(0xff3C8D70),
-              onPressed: () => xcontroller.nextPage(),
+            Align(alignment : Alignment.center,
+              child: Text(
+                'إبدأ الأن',
+                style: TextStyle(color: Colors.white,fontFamily: 'tajawalReg',fontWeight: FontWeight.bold, fontSize: 22),
+              ),
+            ),
+            Align(alignment: Alignment.centerRight,
+              child: Padding(
+                padding: const EdgeInsets.only(right: 10),
+                child: FloatingActionButton(mini: true,
+                  heroTag: "absscd",
+                  backgroundColor: Color(0xff3C8D70),
+                  onPressed: () => xcontroller.nextPage(),
 //                              IntroSlide insl;
 //                              insl.createState().xcontroller.nextPage();
 //                                final CarouselController xcontroller = CarouselController();
@@ -154,11 +159,13 @@ child: Column(children: [
 //                                introSlide.createState().nextSlide();
 //introSlide.
 //                              },
-              child: Icon(
-                Icons.arrow_forward,
-                color: Colors.white,
+                  child: Icon(
+                    Icons.arrow_forward,
+                    color: Colors.white,
+                  ),
+                  foregroundColor: Color(0xff684c4c),
+                ),
               ),
-              foregroundColor: Color(0xff684c4c),
             ),SizedBox(width: 10,),
           ],
         ),
@@ -175,7 +182,7 @@ SizedBox(height: 15,),
         print (isFirst);
 //        Navigator.pushReplacement(context, MaterialPageRoute(
 //            builder: (context) => QrOpedia(url: "https://qpedia.co/en/user/login",) ));
-        Navigator.of(context).pushNamed('/url',arguments: "https://qpedia.co/en/user/login");
+        Navigator.of(context).pushNamed('/url',arguments: "https://qpedia.co/ar/user/login");
       } ,
           child: Text("تسجيل الدخول",style: TextStyle(fontSize: 15,color: Colors.black,fontWeight: FontWeight.bold,fontFamily: 'tajawalReg'),)),Text("لديك حساب؟ ",style: TextStyle(fontSize: 15,color: Colors.grey,fontWeight: FontWeight.bold,fontFamily: 'tajawalReg'),)],),
   )
