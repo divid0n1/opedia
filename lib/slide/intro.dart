@@ -74,7 +74,7 @@ xcontroller.nextPage();
                   return Container(
                     height: MediaQuery.of(context).size.height*0.30,
                     width: MediaQuery.of(context).size.width,
-                    child: Card(
+                    child: Container(
                       color: Colors.blueAccent,
                       child: card,
                     ),

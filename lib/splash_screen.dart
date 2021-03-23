@@ -4,8 +4,8 @@ import 'package:flutter/material.dart';
 import 'package:opedia/slide/intro.dart';
 import 'package:permission_handler/permission_handler.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'file:///C:/Users/Admin/Desktop/Webchat/opedia/lib/qrcode/qrsupport.dart';
-import 'file:///C:/Users/Admin/Desktop/Webchat/opedia/lib/qrcode/qrmain.dart';
+import 'qrcode/qrmain.dart';
+import 'qrcode/qrmain.dart';
 
 import 'opedia/op_web.dart';
 import 'opedia/opedia.dart';

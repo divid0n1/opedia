@@ -1,5 +1,4 @@
 import 'dart:async';
-
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_qr_reader/flutter_qr_reader.dart';
@@ -8,6 +7,7 @@ import 'package:opedia/opedia/op_web.dart';
 import 'package:opedia/opedia/qropedia.dart';
 import 'package:opedia/slide/qrSlide.dart';
 import 'package:permission_handler/permission_handler.dart';
+
 
 /// 使用前需已经获取相关权限
 /// Relevant privileges must be obtained before use
@@ -265,8 +265,8 @@ class QrcodeRState extends State<QrcodeR>
 //
 //        builder: (context) => QrOpedia(url: 'https://qpedia.co/en/ha604mqt19gh',)
 //                      ));
-                        Navigator.of(context).pushNamed('/url',arguments: "https://qpedia.co/ar/mobile");
-
+//                         Navigator.of(context).pushNamed('/url',arguments: "https://qpedia.co/ar/mobile");
+Navigator.of(context).pop();
 
                         ;},
                         child: Container(width: 200,height: 50,

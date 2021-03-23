@@ -221,15 +221,12 @@ class _QrOpediaState extends State<QrOpedia> {
               });
             },
           ),  isLoading ? Center( child: CircularProgressIndicator(),) : Stack(),
-//          _printUrl(),
-
-StreamBuilder(
+Align(alignment: Alignment.bottomCenter,child: Padding(padding: EdgeInsets.only(bottom: 200,),child: Container(
+  height: 50,width: 50,child:StreamBuilder(
   stream: qrButtonControler.qrBoolStream,
   builder: (context,snap){
-if(isQrPage == true ){
-  return    InkWell(onTap: (){ Navigator.of(context).pushNamed('/QrcodeR');},
-    child: Align(alignment: Alignment.bottomCenter,
-      child: Padding(padding: EdgeInsets.only(bottom: 100),
+    if(isQrPage == true ){
+      return    InkWell(onTap: (){ Navigator.of(context).pushNamed('/QrcodeR');},
         child: Container(height: 50,width: 50,decoration: BoxDecoration(image: DecorationImage(image: AssetImage("assets/qricon.png")),
           //  color: Color(0xff308164),
           borderRadius: new BorderRadius.only(
@@ -239,13 +236,12 @@ if(isQrPage == true ){
               bottomRight: const Radius.circular(30.0)),
           border: new Border.all(color: Colors.white,width: 1.0,),
         )),
-      ),
-    ),
-  );
-}
+      );
+    }
     return Container();
   },
-)
+),
+),),)
         ],
 
       ),

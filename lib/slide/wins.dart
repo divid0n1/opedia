@@ -12,8 +12,6 @@ class WelOne extends StatefulWidget {
 //  IntroSlide introSlide = IntroSlide()  ;
 //  const WelOne({Key key}) : super(key: key);
 
-
-
   @override
   _WelOneState createState() => _WelOneState();
 }
@@ -24,54 +22,99 @@ class _WelOneState extends State<WelOne> {
   @override
   Widget build(BuildContext context) {
     final double height = MediaQuery.of(context).size.height;
-    return Scaffold(backgroundColor: Colors.white,
-        body:SingleChildScrollView(
+    return Scaffold(
+        backgroundColor: Colors.white,
+        body: SingleChildScrollView(
           child: Center(
-            child: Container(padding: EdgeInsets.only(left: 20,right: 20,top: 30),
-              child: Column(mainAxisAlignment: MainAxisAlignment.center,
+            child: Container(
+              padding: EdgeInsets.only(left: 20, right: 20, top: 30),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                Container(width: 300,height: 330,
-                  child: Stack(
-                    children: [
-                      Container(width: 300,height: 330,decoration: BoxDecoration( color: Colors.white.withOpacity(0.5), image: DecorationImage(image: AssetImage('assets/welone.png')), )),
-                      Positioned(bottom: 140,left: 140,
-                        child: Center(
-                          child: Container(height: 40,width: 40,
-                            child: FloatingActionButton(mini: true,
-                            heroTag: "oncontasdsiner",
-                            backgroundColor: Color(0xff3C8D70),
+                  Container(
+                    width: 300,
+                    height: 330,
+                    child: Stack(
+                      children: [
+                        Container(
+                            width: 300,
+                            height: 330,
+                            decoration: BoxDecoration(
+                              color: Colors.white.withOpacity(0.5),
+                              image: DecorationImage(
+                                  image: AssetImage('assets/welone.png')),
+                            )),
+                        Positioned(
+                          bottom: 140,
+                          left: 140,
+                          child: Center(
+                            child: Container(
+                              height: 40,
+                              width: 40,
+                              child: FloatingActionButton(
+                                mini: true,
+                                heroTag: "oncontasdsiner",
+                                backgroundColor: Color(0xff3C8D70),
 //                          onPressed: () {},
-                            child: Icon(
-                              Icons.add,
-                              color: Colors.white,
-                             ),
-                            foregroundColor: Color(0xff684c4c),
-                      ),
+                                child: Icon(
+                                  Icons.add,
+                                  color: Colors.white,
+                                ),
+                                foregroundColor: Color(0xff684c4c),
+                              ),
+                            ),
                           ),
-                        ),)
-                    ],
+                        )
+                      ],
+                    ),
                   ),
-                )
-              ,Container(alignment: Alignment.centerLeft,
-                    width: 400,color: Colors.white,child: Column(
+                  Container(
+                    alignment: Alignment.centerLeft,
+                    width: 400,
+                    color: Colors.white,
+                    child: Column(
 //                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: <Widget>[
-                      Text(
-                        'مرحباً بك في مصحفي تطبيق الموسوعة القرآنية التفاعلية', style: TextStyle(fontSize: 25,color: Colors.black,fontFamily: 'tajawalReg',fontWeight: FontWeight.bold,),
-                          textAlign: TextAlign.center
-                      ),
+                      children: <Widget>[
+                        Text(
+                            'مرحباً بك في مصحفي',
+                            style: TextStyle(
+                              fontSize: 25,
+                              color: Colors.black,
+                              fontFamily: 'tajawalReg',
+                              fontWeight: FontWeight.bold,
+                            ),
+                            textAlign: TextAlign.center),
+                        Text(
+                            'تطبيق الموسوعة القرآنية التفاعلية',
+                            style: TextStyle(
+                              fontSize: 25,
+                              color: Colors.black,
+                              fontFamily: 'tajawalReg',
+                              fontWeight: FontWeight.bold,
+                            ),
+                            textAlign: TextAlign.center),
 //                      Text(
 //                        ' ', style: TextStyle(fontFamily: 'tajawalReg',fontSize: 30,fontWeight: FontWeight.bold),textAlign: TextAlign.center,
 //
 //                      ),
 
-                     SizedBox(height: 25,), Text(
-                     "رفيقك الدائم في رحلة فهم القرآن الكريم ومعرفة علومه وتدبر رسالته، ومعينك لتكون من أهل القرآن الكريم أهل الله وخاصته، وعلى صلة دائمة مع الذكر الحكيم من خلال مصحفك الخاص."
-                      ,style: TextStyle(fontSize: 15,color: Colors.grey,fontFamily: 'tajawalReg',fontWeight: FontWeight.bold,),textAlign: TextAlign.center,
+                        SizedBox(
+                          height: 25,
+                        ),
+                        Text(
+                          "رفيقك الدائم في رحلة فهم القرآن الكريم ومعرفة علومه وتدبر رسالته",
+                          style: TextStyle(
+                            fontSize: 15,
+                            color: Colors.grey,
+                            fontFamily: 'tajawalReg',
+                            fontWeight: FontWeight.bold,
+                          ),
+                          textAlign: TextAlign.center,
+                        ),
 
-                      ),
-
-                      SizedBox(height: 45,),
+                        SizedBox(
+                          height: 45,
+                        ),
 /*                      InkWell(                          onTap: ()async{
                         bool isFirst = true;
                         String ourl = 'https://qpedia.co/en/ha604mqt19gh';
@@ -126,8 +169,10 @@ class _WelOneState extends State<WelOne> {
                           ),
                         ),
                       )*/
-                      SizedBox(height: 15,),
-                      /*Row(mainAxisAlignment: MainAxisAlignment.center,
+                        SizedBox(
+                          height: 15,
+                        ),
+                        /*Row(mainAxisAlignment: MainAxisAlignment.center,
                         children: [InkWell(onTap: ()async{
                           bool isFirst = true;
                           SharedPreferences prefs = await SharedPreferences.getInstance();
@@ -140,12 +185,16 @@ class _WelOneState extends State<WelOne> {
 
                         } ,
                             child: Text("تسجيل الدخول",style: TextStyle(fontSize: 15,color: Colors.black,fontWeight: FontWeight.bold,fontFamily: 'tajawalReg'),)),Text("لديك حساب؟ ",style: TextStyle(fontSize: 15,color: Colors.grey,fontWeight: FontWeight.bold,fontFamily: 'tajawalReg'),)],)*/
-                    ],
-                  ),),
-                ],),
+                      ],
+                    ),
+                  ),
+                ],
+              ),
             ),
           ),
-        ) );}}
+        ));
+  }
+}
 
 class WelTwo extends StatefulWidget {
   const WelTwo({Key key}) : super(key: key);
@@ -159,19 +208,34 @@ class _WelTwoState extends State<WelTwo> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(backgroundColor: Colors.white,
-        body:SingleChildScrollView(
+    return Scaffold(
+        backgroundColor: Colors.white,
+        body: SingleChildScrollView(
           child: Center(
-            child: Container(padding: EdgeInsets.only(left: 20,right: 20,top: 30),
-              child: Column(mainAxisAlignment: MainAxisAlignment.center,
+            child: Container(
+              padding: EdgeInsets.only(left: 20, right: 20, top: 30),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Container(width: 300,height: 330,
+                  Container(
+                    width: 300,
+                    height: 330,
                     child: Stack(
                       children: [
-                        Container(width: 300,height: 330,decoration: BoxDecoration( color: Colors.white.withOpacity(0.5), image: DecorationImage(image: AssetImage('assets/weltwo.png')), )),
-                        Positioned(bottom: 140,left: 140,
+                        Container(
+                            width: 300,
+                            height: 330,
+                            decoration: BoxDecoration(
+                              color: Colors.white.withOpacity(0.5),
+                              image: DecorationImage(
+                                  image: AssetImage('assets/weltwo.png')),
+                            )),
+                        Positioned(
+                          bottom: 140,
+                          left: 140,
                           child: Center(
-                            child: Container(height: 40,width: 40,
+                            child: Container(
+                              height: 40, width: 40,
 //                              child: FloatingActionButton(mini: true,
 //                                heroTag: "oncontasdsiner",
 //                                backgroundColor: Color(0xff3C8D70),
@@ -183,33 +247,52 @@ class _WelTwoState extends State<WelTwo> {
 //                                foregroundColor: Color(0xff684c4c),
 //                              ),
                             ),
-                          ),)
+                          ),
+                        )
                       ],
                     ),
-                  )
-                  ,Container(alignment: Alignment.centerLeft,
-                    width: 400,color: Colors.white,child: Column(
+                  ),
+                  Container(
+                    alignment: Alignment.centerLeft,
+                    width: 400,
+                    color: Colors.white,
+                    child: Column(
 //                    crossAxisAlignment: CrossAxisAlignment.start,
                       children: <Widget>[
+                        Text('مصمم ليدعم تدبرك',
+                            style: TextStyle(
+                              fontSize: 25,
+                              color: Colors.black,
+                              fontFamily: 'tajawalReg',
+                              fontWeight: FontWeight.bold,
+                            ),
+                            textAlign: TextAlign.center),
+                        Text('وأنت تتلو من مصحفك',
+                            style: TextStyle(
+                              fontSize: 25,
+                              color: Colors.black,
+                              fontFamily: 'tajawalReg',
+                              fontWeight: FontWeight.bold,
+                            ),
+                            textAlign: TextAlign.center),
+
+                        SizedBox(
+                          height: 25,
+                        ),
                         Text(
-                          'تطبيق مصحفي مصمم ليدعم تدبرك وأنت تتلو من مصحفك', style: TextStyle(fontSize: 25,color: Colors.black,fontFamily: 'tajawalReg',fontWeight: FontWeight.bold,),
-                            textAlign: TextAlign.center
+                            "يمكنك من خلال التطبيق الوصول لكل ما يتعلق بصفحات مصحفك الخاص من تلاوات وتفاسير وشروح وترجمات",
+                            style: TextStyle(
+                              fontSize: 15,
+                              color: Colors.grey,
+                              fontFamily: 'tajawalReg',
+                              fontWeight: FontWeight.bold,
+                            ),
+                            textAlign: TextAlign.center),
 
+                        SizedBox(
+                          height: 45,
                         ),
-//                      Text(
-//                        ' ', style: TextStyle(fontFamily: 'tajawalReg',fontSize: 30,fontWeight: FontWeight.bold),textAlign: TextAlign.center,
-//
-//                      ),
-
-                        SizedBox(height: 25,), Text(
-                          "يمكنك الوصول بسهولة لكل ما يتعلق بصفحات مصحفك الخاص من تلاوات وتسجيلات ومرئيات وتفاسير وشروح وترجمات للمعاني ومؤلفات بعدة لغات، لتنعم بصحبة القرآن الكريم و الاطلاع على علومه دون عناء."
-                          ,style: TextStyle(fontSize: 15,color: Colors.grey,fontFamily: 'tajawalReg',fontWeight: FontWeight.bold,),
-                            textAlign: TextAlign.center
-
-                        ),
-
-                        SizedBox(height: 45,),
-                       /* InkWell(                          onTap: ()async{
+                        /* InkWell(                          onTap: ()async{
                           bool isFirst = true;
                           String ourl = 'https://qpedia.co/en/ha604mqt19gh';
                           SharedPreferences prefs = await SharedPreferences.getInstance();
@@ -274,12 +357,14 @@ class _WelTwoState extends State<WelTwo> {
                             children: [Text("تسجيل الدخول",style: TextStyle(fontSize: 15,color: Colors.black,fontWeight: FontWeight.bold,fontFamily: 'tajawalReg'),),Text("لديك حساب؟ ",style: TextStyle(fontSize: 15,color: Colors.grey,fontWeight: FontWeight.bold,fontFamily: 'tajawalReg'),)],),
                         )*/
                       ],
-                    ),),
-                ],),
+                    ),
+                  ),
+                ],
+              ),
             ),
           ),
-        ) );}
-
+        ));
+  }
 }
 
 class WelThree extends StatefulWidget {
@@ -288,23 +373,36 @@ class WelThree extends StatefulWidget {
 }
 
 class _WelThreeState extends State<WelThree> {
-
-
   @override
   Widget build(BuildContext context) {
-    return Scaffold(backgroundColor: Colors.white,
-        body:SingleChildScrollView(
+    return Scaffold(
+        backgroundColor: Colors.white,
+        body: SingleChildScrollView(
           child: Center(
-            child: Container(padding: EdgeInsets.only(left: 20,right: 20,top: 30),
-              child: Column(mainAxisAlignment: MainAxisAlignment.center,
+            child: Container(
+              padding: EdgeInsets.only(left: 20, right: 20, top: 30),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Container(width: 300,height: 330,
+                  Container(
+                    width: 300,
+                    height: 330,
                     child: Stack(
                       children: [
-                        Container(width: 300,height: 330,decoration: BoxDecoration( color: Colors.white.withOpacity(0.5), image: DecorationImage(image: AssetImage('assets/welthree.png')), )),
-                        Positioned(bottom: 140,left: 140,
+                        Container(
+                            width: 300,
+                            height: 330,
+                            decoration: BoxDecoration(
+                              color: Colors.white.withOpacity(0.5),
+                              image: DecorationImage(
+                                  image: AssetImage('assets/welthree.png')),
+                            )),
+                        Positioned(
+                          bottom: 140,
+                          left: 140,
                           child: Center(
-                            child: Container(height: 40,width: 40,
+                            child: Container(
+                              height: 40, width: 40,
 //                              child: FloatingActionButton(mini: true,
 //                                heroTag: "oncontasdsiner",
 //                                backgroundColor: Color(0xff3C8D70),
@@ -316,34 +414,52 @@ class _WelThreeState extends State<WelThree> {
 //                                foregroundColor: Color(0xff684c4c),
 //                              ),
                             ),
-                          ),)
+                          ),
+                        )
                       ],
                     ),
-                  )
-                  ,Container(alignment: Alignment.centerLeft,
-                    width: 400,color: Colors.white,child: Column(
+                  ),
+                  Container(
+                    alignment: Alignment.centerLeft,
+                    width: 400,
+                    color: Colors.white,
+                    child: Column(
 //                    crossAxisAlignment: CrossAxisAlignment.start,
                       children: <Widget>[
+                        Text(' يساعدك تطبيق مصحفي',
+                            style: TextStyle(
+                              fontSize: 25,
+                              color: Colors.black,
+                              fontFamily: 'tajawalReg',
+                              fontWeight: FontWeight.bold,
+                            ),
+                            textAlign: TextAlign.center),
+                        Text('في زيادة معلوماتك القرآنية',
+                            style: TextStyle(
+                              fontSize: 25,
+                              color: Colors.black,
+                              fontFamily: 'tajawalReg',
+                              fontWeight: FontWeight.bold,
+                            ),
+                            textAlign: TextAlign.center),
+
+                        SizedBox(
+                          height: 25,
+                        ),
                         Text(
-'تطبيق مصحفي يساعدك في زيادة معلوماتك القرآنية'
-                          , style: TextStyle(fontSize: 25,color: Colors.black,fontFamily: 'tajawalReg',fontWeight: FontWeight.bold,),
-                            textAlign: TextAlign.center
+                            "خير معين لك لاستثمار أوقاتك في الاستزادة من زاد القرآن الكريم ودوام الصلة به",
+                            style: TextStyle(
+                              fontSize: 15,
+                              color: Colors.grey,
+                              fontFamily: 'tajawalReg',
+                              fontWeight: FontWeight.bold,
+                            ),
+                            textAlign: TextAlign.center),
 
+                        SizedBox(
+                          height: 45,
                         ),
-//                      Text(
-//                        ' ', style: TextStyle(fontFamily: 'tajawalReg',fontSize: 30,fontWeight: FontWeight.bold),textAlign: TextAlign.center,
-//
-//                      ),
-
-                        SizedBox(height: 25,), Text(
-     "خير معين لك لاستثمار أوقاتك في الاستزادة من زاد القرآن الكريم ودوام الصلة به من خلال برمجة ختماتك المتنوعة وقراءاتك مع خدمات البحث وتدوين الملاحظات والحفظ في محفظتك وغير ذلك الكثير."
-                          ,style: TextStyle(fontSize: 15,color: Colors.grey,fontFamily: 'tajawalReg',fontWeight: FontWeight.bold,),
-                            textAlign: TextAlign.center
-
-                        ),
-
-                        SizedBox(height: 45,),
-                       /* InkWell(
+                        /* InkWell(
                           onTap: ()async{
                             bool isFirst = true;
                             String ourl = 'https://qpedia.co/en/ha604mqt19gh';
@@ -416,17 +532,19 @@ class _WelThreeState extends State<WelThree> {
                   builder: (context) => QrOpedia(url: "https://qpedia.co/en/user/login",) ));
                   } ,child: Text("تسجيل الدخول",style: TextStyle(fontSize: 15,color: Colors.black,fontWeight: FontWeight.bold,fontFamily: 'tajawalReg'),)),Text("لديك حساب؟ ",style: TextStyle(fontSize: 15,color: Colors.grey,fontWeight: FontWeight.bold,fontFamily: 'tajawalReg'),)],)*/
                       ],
-                    ),),
-                ],),
+                    ),
+                  ),
+                ],
+              ),
             ),
           ),
-        ) );}
+        ));
+  }
 }
 
-
-
 class ExpandableText extends StatefulWidget {
-  ExpandableText(this.text,this.size,this.rang);
+  ExpandableText(this.text, this.size, this.rang);
+
   final double size;
   final Color rang;
   final String text;
@@ -449,20 +567,26 @@ class _ExpandableTextState extends State<ExpandableText>
                   ? new BoxConstraints()
                   : new BoxConstraints(maxHeight: 40.0),
               child: new Text(
-                widget.text,style: TextStyle(fontSize: widget.size,color: widget.rang,fontFamily: 'tajawalReg',fontWeight: FontWeight.bold,),textAlign: TextAlign.center,
+                widget.text,
+                style: TextStyle(
+                  fontSize: widget.size,
+                  color: widget.rang,
+                  fontFamily: 'tajawalReg',
+                  fontWeight: FontWeight.bold,
+                ),
+                textAlign: TextAlign.center,
                 softWrap: true,
                 overflow: TextOverflow.fade,
               ))),
       widget.isExpanded
           ? new ConstrainedBox(constraints: new BoxConstraints())
-          : SizedBox(height: 40,
-            child: new InkWell(
-            child: const Text('                                                                                                            '),
-            onTap: () => setState(() => widget.isExpanded = true)),
-          )
+          : SizedBox(
+              height: 40,
+              child: new InkWell(
+                  child: const Text(
+                      '                                                                                                            '),
+                  onTap: () => setState(() => widget.isExpanded = true)),
+            )
     ]);
   }
 }
-
-
-

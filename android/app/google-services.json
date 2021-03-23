@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "263303949926",
+    "firebase_url": "https://mushafi-7db92.firebaseio.com",
+    "project_id": "mushafi-7db92",
+    "storage_bucket": "mushafi-7db92.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:263303949926:android:ae07eea3a0567b930c87a7",
+        "android_client_info": {
+          "package_name": "co.opedia.opedia"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "263303949926-7alrbafc6q815lsmuedr0ha9li6fs28e.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAA3apAoyjjfQHjyphOiFNJZBZX_T_NCO4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "263303949926-7alrbafc6q815lsmuedr0ha9li6fs28e.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "263303949926-odvdl4q8dbajgil1p2t9b8qoail5i2m2.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.mushafi.app"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
